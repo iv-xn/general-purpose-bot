@@ -40,6 +40,28 @@ const CHALLENGE_COMMAND = {
   type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+//Command containing options
+const PHEON_COMMAND = {
+  name: 'pheon',
+  description: 'pheon command test',
+  options: [
+    {
+      type: 4,
+      name: 'pheon-qty',
+      description: 'Type Pheon Quantity',
+      required: true,
+    },
+    {
+      type: 4,
+      name: 'bc-qty',
+      description: 'Type BC Quantity',
+      required: true,
+    }
+  ],
+  type: 1,
+};
+
+
+const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND, PHEON_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
